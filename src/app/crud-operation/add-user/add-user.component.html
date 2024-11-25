@@ -1,0 +1,24 @@
+<div class="container">
+<div class="row justify-content-center align-items-center mx-auto">
+    <div class="col-6">
+        <h1>User Form</h1>
+        <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="userName" class="form-label">User Name</label>
+                <input type="text" id="userName" formControlName="userName" class="form-control" placeholder="Enter Username">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" class="form-control" formControlName="email" placeholder="Enter Email">
+            </div>
+            <div class="mb-3">
+                <label for="userRole" class="form-label">Role</label>
+                <input type="text" id="userRole" class="form-control" formControlName="userRole" placeholder="Enter Role">
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-primary" [disabled]="this.addUserForm.invalid">Add user</button>
+            </div>
+        </form>
+    </div>
+</div> 
+</div>
